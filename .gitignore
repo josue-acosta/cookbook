@@ -1,0 +1,4 @@
+# api files and folders
+venv
+__pycache__
+configuration.py
