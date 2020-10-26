@@ -14,3 +14,8 @@ def index():
 @generic_urls_blueprint.route("/api/time")
 def get_current_time():
     return {"time": datetime.now().strftime("%A, %d. %B %Y %I:%M%p")}
+
+
+@generic_urls_blueprint.errorhandler(404)
+def not_found(e):
+    return app.send_static_file('index.html')

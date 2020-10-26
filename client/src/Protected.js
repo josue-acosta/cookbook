@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useOktaAuth } from '@okta/okta-react';
 
 // Styles
@@ -56,6 +57,8 @@ function Protected() {
                     <strong>PROTECTED</strong>
                     <img src={logo} className="App-logo" alt="logo" />
                     <p>It's' {currentTime}.</p>
+                    <Link style={{ color: 'white' }} to="/home">Home Page</Link>
+                    <Link style={{ color: 'white' }} to="/protected">Protected Page</Link>
                 </header>
             </div>
         </>

@@ -13,11 +13,10 @@ import './App.css';
 function App() {
     return (
         <BrowserRouter>
-
             <Security
                 issuer={'https://dev-8580715.okta.com/oauth2/default'}
                 client_id={'0oaet93haDsYEzWIm5d5'}
-                redirect_uri={'https://react-flask-001.herokuapp.com/implicit/callback'}
+                redirect_uri={'http://localhost:8080/implicit/callback'}
                 scope={['openid', 'profile', 'email']}
             >
                 <Switch>
